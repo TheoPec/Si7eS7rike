@@ -509,7 +509,7 @@ var PLAYERS_DATA = {
                                          {
                                              "tournoi":  "Gay Porno tournament",
                                              "place":  "1st",
-                                             "annnee":  "2026",
+                                             "annee":  "2026",
                                              "prize":  "$69"
                                          },
                                          {
