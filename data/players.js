@@ -448,12 +448,12 @@ var PLAYERS_DATA = {
                         "nom":  "Garlement",
                         "prenom":  "Louis",
                         "photo":  "photos/porno.png",
-                        "nationalite":  "Belgique",
+                        "nationalite":  "Belgium",
                         "drapeau":  "🇧🇪",
-                        "age":  20,
+                        "age":  19,
                         "dateNaissance":  "October 9, 2006",
                         "role":  "Coach",
-                        "armePreferee":  "M4A1-S",
+                        "armePreferee":  "AWP",
                         "equipeActuelle":  "Porning",
                         "status":  "Active",
                         "crosshairPlacement":  "Spray & Pray",
@@ -469,16 +469,16 @@ var PLAYERS_DATA = {
                                       "mapsJoues":  121
                                   },
                         "mouseSettings":  {
-                                              "mouse":  "Raseur à 2€",
-                                              "edpi":  "800",
-                                              "dpi":  "400",
-                                              "sensitivity":  "2.0"
+                                              "mouse":  "Razer DeathAdder V2",
+                                              "edpi":  "1200",
+                                              "dpi":  "1200",
+                                              "sensitivity":  "1.0"
                                           },
                         "gear":  {
-                                     "Mouse":  "Raseur à 2€",
-                                     "Mousepad":  "Nothing",
+                                     "Mouse":  "Razer DeathAdder V2",
+                                     "Mousepad":  "None",
                                      "Monitor":  "Almost broken (60Hz)",
-                                     "Resolution":  "1980x1080",
+                                     "Resolution":  "1280x960",
                                      "Keyboard":  "Laptop keyboard",
                                      "Headset":  "Entry level JBL headphones"
                                  },
@@ -507,10 +507,52 @@ var PLAYERS_DATA = {
                                              "prize":  "$6700"
                                          },
                                          {
+                                             "tournoi":  "Gay Porno tournament",
+                                             "place":  "1st",
+                                             "annnee":  "2026",
+                                             "prize":  "$69"
+                                         },
+                                         {
                                              "tournoi":  "Mons tournament",
                                              "place":  "2nd",
                                              "annee":  "2025",
                                              "prize":  "$40"
+                                         },
+                                         {
+                                             "tournoi":  "Skill Test tournament",
+                                             "place":  "1187365481th",
+                                             "annee":  "2026",
+                                             "prize":  "$0"
+                                         },
+                                         {
+                                             "tournoi":  "Skill Test tournament",
+                                             "place":  "1187365481th",
+                                             "annee":  "2025",
+                                             "prize":  "$0"
+                                         },
+                                         {
+                                             "tournoi":  "Skill Test tournament",
+                                             "place":  "1187365481th",
+                                             "annee":  "2024",
+                                             "prize":  "$0"
+                                         },
+                                         {
+                                             "tournoi":  "Skill Test tournament",
+                                             "place":  "1187365481th",
+                                             "annee":  "2023",
+                                             "prize":  "$0"
+                                         },
+                                         {
+                                             "tournoi":  "Skill Test tournament",
+                                             "place":  "1187365481th",
+                                             "annee":  "2022",
+                                             "prize":  "$0"
+                                         },
+                                         {
+                                             "tournoi":  "Skill Test tournament",
+                                             "place":  "1187365481th",
+                                             "annee":  "2021",
+                                             "prize":  "$0"
                                          }
                                      ]
                     },
