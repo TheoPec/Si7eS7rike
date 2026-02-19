@@ -1,0 +1,126 @@
+{
+  "players": [
+    {
+      "id": "scream",
+      "pseudo": "ScreaM",
+      "nom": "Benrlitom",
+      "prenom": "Adil",
+      "photo": "photos/scream.jpg",
+      "nationalite": "Belgium",
+      "drapeau": "🇧🇪",
+      "age": 31,
+      "dateNaissance": "July 2, 1994",
+      "role": "Rifler / Content Creator",
+      "armePreferee": "AK-47",
+      "equipeActuelle": "FUT Esports",
+      "status": "Active",
+      "crosshairPlacement": "Headshot Machine",
+      "maps": ["Dust2", "Mirage", "Inferno"],
+      "stats": {
+        "kdRatio": 1.08,
+        "hsPercent": 65.2,
+        "rating": 1.05,
+        "mapsJoues": 1547
+      },
+      "mouseSettings": {
+        "mouse": "FinalMouse Classic Ergo",
+        "edpi": "1000",
+        "dpi": "400",
+        "sensitivity": "2.5"
+      },
+      "gear": {
+        "Mouse": "FinalMouse Classic Ergo",
+        "Mousepad": "SteelSeries QcK Heavy",
+        "Monitor": "ALIENWARE AW2521H (360Hz)",
+        "Resolution": "1024x768 Stretched",
+        "Keyboard": "HyperX Alloy FPS",
+        "Headset": "Sennheiser Game Zero"
+      },
+      "reseaux": {
+        "twitter": "https://twitter.com/ScreaM_",
+        "twitch": "https://twitch.tv/scream",
+        "youtube": "https://youtube.com/@ScreaM",
+        "instagram": ""
+      },
+      "bio": "Adil \"ScreaM\" Benrlitom (born July 2, 1994) is a Belgian professional Counter-Strike 2 player and content creator and a former Counter-Strike: Global Offensive and Counter-Strike: Source player of Moroccan descent. Over the course of his career, he has played on several top French squads including VeryGames, Titan, Epsilon eSports, G2 Esports, and Team Envy, before retiring on August 7, 2020 to pursue a career in VALORANT. ScreaM returned to Counter-Strike as a content creator and substitute for FUT Esports' Counter-Strike 2 team.",
+      "equipesPassees": [
+        { "nom": "hf.MOTHER", "periode": "2010 — 2010" },
+        { "nom": "redLine", "periode": "2010 — 2010" },
+        { "nom": "eLogic Gaming", "periode": "2010 — 2010" },
+        { "nom": "3DMAX", "periode": "2011 — 2011" },
+        { "nom": "Team LDLC.com", "periode": "2011 — 2011" },
+        { "nom": "Tt.Dragons", "periode": "2012 — 2012" },
+        { "nom": "VeryGames", "periode": "2013 — 2013" },
+        { "nom": "Epsilon eSports", "periode": "2014 — 2015" },
+        { "nom": "Titan", "periode": "2014 — 2016" },
+        { "nom": "G2 Esports", "periode": "2016 — 2017" },
+        { "nom": "Team Envy", "periode": "2017 — 2020" },
+        { "nom": "GamerLegion", "periode": "2019 — 2020" }
+      ],
+      "palmares": [
+        { "tournoi": "DreamHack Open Atlanta 2017", "place": "1st", "annee": "2017-07", "prize": "$50,000" },
+        { "tournoi": "Esports Championship Series Season 1 - Finals", "place": "1st", "annee": "2016-06", "prize": "$250,000" },
+        { "tournoi": "Gaming Paradise 2015", "place": "1st", "annee": "2015-09", "prize": "$30,000" },
+        { "tournoi": "ESL Major Series One - Fall 2013", "place": "1st", "annee": "2013-10", "prize": "$12,000" },
+        { "tournoi": "ESL Major Series One - Summer 2013", "place": "1st", "annee": "2013-06", "prize": "$12,000" },
+        { "tournoi": "ESL Pro League Season 5 - Finals", "place": "5-6th", "annee": "2017-06", "prize": "$45,000" },
+        { "tournoi": "Northern Arena 2016 - Montreal", "place": "2nd", "annee": "2016-11", "prize": "$25,000" },
+        { "tournoi": "StarLadder i-League StarSeries S2", "place": "2nd", "annee": "2016-09", "prize": "$50,000" },
+        { "tournoi": "ESL Pro League Season 3 - Finals", "place": "2nd", "annee": "2016-05", "prize": "$90,000" },
+        { "tournoi": "DreamHack Winter 2013", "place": "3rd-4th", "annee": "2013-11", "prize": "$22,000" }
+      ]
+    },
+    {
+      "id": "tonpote",
+      "pseudo": "TonPote",
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "photo": "photos/tonpote.jpg",
+      "nationalite": "France",
+      "drapeau": "🇫🇷",
+      "age": 24,
+      "dateNaissance": "May 15, 2001",
+      "role": "AWPer",
+      "armePreferee": "AWP",
+      "equipeActuelle": "Les Bras Cassés",
+      "status": "Active",
+      "crosshairPlacement": "Spray & Pray",
+      "maps": ["Mirage", "Nuke", "Ancient"],
+      "stats": {
+        "kdRatio": 0.87,
+        "hsPercent": 42.1,
+        "rating": 0.92,
+        "mapsJoues": 342
+      },
+      "mouseSettings": {
+        "mouse": "Logitech G Pro X",
+        "edpi": "800",
+        "dpi": "400",
+        "sensitivity": "2.0"
+      },
+      "gear": {
+        "Mouse": "Logitech G Pro X Superlight",
+        "Mousepad": "Artisan Hien XL",
+        "Monitor": "BenQ Zowie XL2546K (240Hz)",
+        "Resolution": "1280x960 Stretched",
+        "Keyboard": "Wooting 60HE",
+        "Headset": "HyperX Cloud II"
+      },
+      "reseaux": {
+        "twitter": "",
+        "twitch": "",
+        "youtube": "",
+        "instagram": ""
+      },
+      "bio": "Jean \"TonPote\" Dupont est un joueur français de Counter-Strike 2. Connu pour son style de jeu agressif et son inability totale à acheter des utilitaires. Il rush B sans flash et blame son équipe. Malgré tout, sa maîtrise de l'AWP dans les angles improbables lui a valu le respect de ses coéquipiers.",
+      "equipesPassees": [
+        { "nom": "Silver Elite FC", "periode": "2020 — 2022" },
+        { "nom": "Les Bots", "periode": "2022 — 2023" }
+      ],
+      "palmares": [
+        { "tournoi": "Tournoi du quartier", "place": "3rd", "annee": "2023", "prize": "Un kebab" },
+        { "tournoi": "LAN de la cave", "place": "1st", "annee": "2024", "prize": "La gloire" }
+      ]
+    }
+  ]
+}

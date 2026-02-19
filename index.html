@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI7ES7RIKE Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wiki-wrapper">
+
+    <div class="wiki-header">
+      <div class="wiki-header-inner">
+        <a href="index.html" class="wiki-logo">SI7ES7RIKE</a>
+        <span class="wiki-subtitle">Counter-Strike Wiki</span>
+      </div>
+    </div>
+
+    <div class="wiki-body">
+      <div class="wiki-content-area">
+        <h1 class="wiki-page-title">Players</h1>
+        <p class="wiki-intro">Liste des joueurs référencés sur le wiki.</p>
+
+        <div class="player-buttons" id="playerButtons">
+        </div>
+
+        <div class="carousel-section">
+          <h2>Gallery</h2>
+          <div id="carouselRoot"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="data/players.js"></script>
+  <script src="data/carousel.js"></script>
+  <script>
+    function init() {
+      const data = PLAYERS_DATA;
+      const container = document.getElementById('playerButtons');
+      container.innerHTML = data.players.map(p => `
+        <a href="player.html?id=${p.id}" class="player-btn">
+          <span class="player-btn-flag">${p.drapeau}</span>
+          <span class="player-btn-name">${p.pseudo}</span>
+        </a>
+      `).join('');
+
+      // Carousel
+      const root = document.getElementById('carouselRoot');
+      const slides = typeof CAROUSEL_DATA !== 'undefined' ? CAROUSEL_DATA : [];
+      if (slides.length === 0) {
+        root.innerHTML = '<p class="carousel-empty">Aucune image dans le dossier <strong>carousel/</strong> pour le moment.</p>';
+        return;
+      }
+      let current = 0;
+      root.innerHTML = `
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            ${slides.map(s => `
+              <div class="carousel-slide">
+                <img src="${s.src}" alt="${s.caption || ''}">
+                ${s.caption ? `<div class="carousel-caption">${s.caption}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+          <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="carousel-dots" id="carouselDots">
+          ${slides.map((_, i) => `<button class="carousel-dot${i===0?' active':''}" onclick="goSlide(${i})"></button>`).join('')}
+        </div>
+      `;
+
+      window.moveSlide = function(dir) {
+        current = (current + dir + slides.length) % slides.length;
+        updateCarousel();
+      };
+      window.goSlide = function(i) {
+        current = i;
+        updateCarousel();
+      };
+      function updateCarousel() {
+        document.getElementById('carouselTrack').style.transform = `translateX(-${current * 100}%)`;
+        document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      // Auto-slide every 5s
+      let autoSlide = setInterval(() => moveSlide(1), 5000);
+      root.addEventListener('mouseenter', () => clearInterval(autoSlide));
+      root.addEventListener('mouseleave', () => { autoSlide = setInterval(() => moveSlide(1), 5000); });
+    }
+    init();
+  </script>
+</body>
+</html>

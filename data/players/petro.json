@@ -1,0 +1,96 @@
+{
+  "_AIDE_GENERALE": "Remplis ce fichier avec tes infos CS2 et renvoie-le moi ! Les champs avec _AIDE t'expliquent quoi mettre.",
+
+  "id": "petro",
+  "_AIDE_id": "Ton pseudo en minuscules, sans espaces ni accents. Ex: scream, tonpote, kennyS",
+
+  "pseudo": "Petro40",
+  "_AIDE_pseudo": "Ton pseudo in-game tel qu'il s'affiche. Ex: ScreaM, TonPote",
+
+  "nom": "Pector",
+  "prenom": "Elie",
+
+  "photo": "images/petro.png",
+  "_AIDE_photo": "Laisse vide, je m'en occupe. Sinon envoie-moi une photo avec le fichier.",
+
+  "nationalite": "Belgique",
+  "_AIDE_nationalite": "Ton pays en anglais. Ex: France, Belgium, Morocco, Canada",
+
+  "drapeau": "🇧🇪",
+  "_AIDE_drapeau": "L'emoji drapeau de ton pays. Ex: 🇫🇷 🇧🇪 🇲🇦 🇨🇦 🇨🇭",
+
+  "age": 17,
+  "_AIDE_age": "Ton âge (un nombre, pas de guillemets)",
+
+  "dateNaissance": "Janvier 13, 2009",
+  "_AIDE_dateNaissance": "Ta date de naissance en anglais. Ex: March 15, 2001",
+
+  "role": "Rifler",
+  "_AIDE_role": "Ton rôle principal. Ex: Rifler, AWPer, Entry Fragger, IGL, Support, Lurker",
+
+  "armePreferee": "AK47",
+  "_AIDE_armePreferee": "Ton arme préférée. Ex: AK-47, AWP, M4A1-S, M4A4, Deagle, USP-S",
+
+  "equipeActuelle": "Porning Academy",
+  "_AIDE_equipeActuelle": "Le nom de ton équipe actuelle (ou 'Aucune')",
+
+  "status": "Active",
+  "_AIDE_status": "Active ou Inactive",
+
+  "crosshairPlacement": "The Baby Goat",
+  "_AIDE_crosshairPlacement": "Décris ton style en quelques mots. Ex: Headshot Machine, Spray & Pray, One Tap God",
+
+  "maps": ["", "", ""],
+  "_AIDE_maps": "Tes 3 maps préférées parmi: Dust2, Mirage, Inferno, Nuke, Overpass, Ancient, Anubis, Vertigo",
+
+  "stats": {
+    "kdRatio": 1.21,
+    "hsPercent": 44.0,
+    "rating": 1.24,
+    "mapsJoues": 239,
+    "_AIDE": "Tes stats CS2. kdRatio = kills/deaths, hsPercent = % headshot, rating = ta note, mapsJoues = nombre de maps jouées"
+  },
+
+  "mouseSettings": {
+    "mouse": "Logitech G309",
+    "edpi": "800",
+    "dpi": "400",
+    "sensitivity": "2.0",
+    "_AIDE": "eDPI = DPI x sensibilité in-game"
+  },
+
+  "gear": {
+    "Mouse": "Logitech G309",
+    "Mousepad": "temu XL",
+    "Monitor": "Almost broken (100Hz)",
+    "Resolution": "1980x1080",
+    "Keyboard": "Laptop keyboard",
+    "Headset": "Entry level JBL headphones"
+  },
+
+  "reseaux": {
+    "twitter": "",
+    "twitch": "",
+    "youtube": "",
+    "instagram": "",
+    "_AIDE": "Mets tes liens complets ou laisse vide. Ex: https://twitch.tv/tonpseudo"
+  },
+
+  "bio": "Elie \"Petro40\" Pector is an up-and-coming rifler widely regarded as a future star. Known for explosive entry fragging, sharp crosshair placement, and strong map awareness, Petro consistently turns small advantages into round-winning plays. A quick learner with a relentless practice ethic, he is already on the radar of academy teams and is expected to break into the pro scene soon.",
+
+  "equipesPassees": [
+    { "nom": "Porning Academy", "periode": "2024 — Present" }
+  ],
+  "_AIDE_equipesPassees": "Liste tes anciennes équipes avec les dates. Ajoute ou supprime des lignes selon ton parcours.",
+
+
+    "palmares": [
+      { "tournoi": "Judy Hops Pro league Season XXII", "place": "1st", "annee": "2026", "prize": "$6700" },
+      { "tournoi": "Caffe du coin", "place": "2nd", "annee": "2025", "prize": "$40" },
+      { "tournoi": "LAN de la cave", "place": "5th", "annee": "2024", "prize": "$200" },
+      { "tournoi": "Silver Elite Invitational", "place": "Last", "annee": "2023", "prize": "A $10 PSN gift card" },
+      { "tournoi": "Belgium Worl Cup", "place": "3rd", "annee": "2025", "prize": "$1000" },
+      { "tournoi": "Rage Masters", "place": "Disqualified", "annee": "2026", "prize": "$0" }
+    ],
+  "_AIDE_palmares": "Tes résultats en tournoi. place = 1st, 2nd, 3rd, etc. Ajoute ou supprime des lignes. Mets ce que tu veux dans prize."
+}

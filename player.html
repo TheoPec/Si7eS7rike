@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI7ES7RIKE Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wiki-wrapper">
+
+    <div class="wiki-header">
+      <div class="wiki-header-inner">
+        <a href="index.html" class="wiki-logo">SI7ES7RIKE</a>
+        <span class="wiki-subtitle">Counter-Strike Wiki</span>
+      </div>
+    </div>
+
+    <div class="wiki-body">
+      <div class="wiki-content-area" id="playerPage">
+      </div>
+    </div>
+
+  </div>
+
+  <script src="data/players.js"></script>
+  <script>
+    function getParam(name) {
+      return new URLSearchParams(window.location.search).get(name);
+    }
+
+    function renderPlayer(p) {
+      document.title = `${p.pseudo} - SI7ES7RIKE Wiki`;
+
+      // Build history rows
+      const historyRows = p.equipesPassees.map(e =>
+        `<tr><td class="history-dates">${e.periode}</td><td class="history-team">${e.nom}</td></tr>`
+      ).join('');
+
+      // Build achievements rows
+      const achieveRows = p.palmares.map(t => {
+        let placeClass = '';
+        if (t.place.startsWith('1')) placeClass = 'place-gold';
+        else if (t.place.startsWith('2')) placeClass = 'place-silver';
+        else if (t.place.startsWith('3')) placeClass = 'place-bronze';
+        else placeClass = 'place-other';
+        return `<tr>
+          <td>${t.annee}</td>
+          <td><span class="place-badge ${placeClass}">${t.place}</span></td>
+          <td>${t.tournoi}</td>
+          <td>${t.prize || ''}</td>
+        </tr>`;
+      }).join('');
+
+      // Build gear rows
+      let gearHTML = '';
+      if (p.gear) {
+        const gearRows = Object.entries(p.gear).map(([k,v]) =>
+          `<tr><td>${k}</td><td>${v}</td></tr>`
+        ).join('');
+        gearHTML = `
+        <h2>Gear and Settings</h2>
+        <table class="wiki-table gear-table">
+          <thead><tr><th>Item</th><th>Details</th></tr></thead>
+          <tbody>${gearRows}</tbody>
+        </table>`;
+      }
+
+      // Build mouse settings rows
+      let mouseHTML = '';
+      if (p.mouseSettings) {
+        mouseHTML = `
+        <h3>Mouse Settings</h3>
+        <table class="wiki-table">
+          <thead><tr><th>Mouse</th><th>eDPI</th><th>DPI</th><th>Sensitivity</th></tr></thead>
+          <tbody><tr>
+            <td>${p.mouseSettings.mouse || ''}</td>
+            <td>${p.mouseSettings.edpi || ''}</td>
+            <td>${p.mouseSettings.dpi || ''}</td>
+            <td>${p.mouseSettings.sensitivity || ''}</td>
+          </tr></tbody>
+        </table>`;
+      }
+
+      // Socials
+      const socials = [];
+      if (p.reseaux) {
+        if (p.reseaux.twitter) socials.push(`<a href="${p.reseaux.twitter}" target="_blank">Twitter</a>`);
+        if (p.reseaux.twitch) socials.push(`<a href="${p.reseaux.twitch}" target="_blank">Twitch</a>`);
+        if (p.reseaux.youtube) socials.push(`<a href="${p.reseaux.youtube}" target="_blank">YouTube</a>`);
+        if (p.reseaux.instagram) socials.push(`<a href="${p.reseaux.instagram}" target="_blank">Instagram</a>`);
+      }
+      const linksHTML = socials.length > 0 ? `
+        <div class="infobox-section-header">Links</div>
+        <div class="infobox-links">${socials.join(' ')}</div>
+      ` : '';
+
+      return `
+        <!-- INFOBOX DROITE -->
+        <div class="infobox">
+          <div class="infobox-header">${p.pseudo}</div>
+          <div class="infobox-image${p.photo ? '' : ' no-photo-box'}">
+            ${p.photo ? `<img src="${p.photo}" alt="${p.pseudo}">` : ''}
+            <span class="no-photo-letter" style="${p.photo ? 'display:none;' : ''}">${p.pseudo.charAt(0)}</span>
+          </div>
+          <div class="infobox-section-header">Player Information</div>
+          <table class="infobox-table">
+            <tr><td class="info-label">Name:</td><td>${p.prenom} ${p.nom}</td></tr>
+            <tr><td class="info-label">Nationality:</td><td>${p.drapeau} ${p.nationalite}</td></tr>
+            <tr><td class="info-label">Born:</td><td>${p.dateNaissance} (age ${p.age})</td></tr>
+            <tr><td class="info-label">Status:</td><td class="status-${p.status.toLowerCase().replace(/\s/g,'-')}">${p.status}</td></tr>
+            <tr><td class="info-label">Roles:</td><td>${p.role}</td></tr>
+            <tr><td class="info-label">Team:</td><td class="team-value">${p.equipeActuelle}</td></tr>
+            <tr><td class="info-label">Nickname(s):</td><td>${p.crosshairPlacement || ''}</td></tr>
+            ${p.stats ? `<tr><td class="info-label">K/D Ratio:</td><td>${p.stats.kdRatio}</td></tr>
+            <tr><td class="info-label">HS%:</td><td>${p.stats.hsPercent}%</td></tr>
+            <tr><td class="info-label">Rating:</td><td>${p.stats.rating}</td></tr>
+            <tr><td class="info-label">Maps Played:</td><td>${p.stats.mapsJoues}</td></tr>` : ''}
+          </table>
+          ${linksHTML}
+          <div class="infobox-section-header">History</div>
+          <table class="infobox-table history-table">
+            ${historyRows}
+            <tr><td class="history-dates" style="color:#4fa;">Present</td><td class="history-team" style="color:#4fa;">${p.equipeActuelle}</td></tr>
+          </table>
+        </div>
+
+        <!-- CONTENU GAUCHE -->
+        <div class="wiki-main">
+          <h1 class="wiki-page-title">${p.pseudo}</h1>
+
+          <div class="wiki-tabs">
+            <span class="wiki-tab active">Overview</span>
+          </div>
+
+          <div class="wiki-text">
+            <p>${p.bio}</p>
+          </div>
+
+          ${p.maps ? `
+          <h2>Favorite Maps</h2>
+          <div class="maps-tags">${p.maps.map(m => `<span class="map-tag">${m}</span>`).join('')}</div>
+          ` : ''}
+
+          ${mouseHTML}
+          ${gearHTML}
+
+          ${p.palmares && p.palmares.length > 0 ? `
+          <h2>Achievements</h2>
+          <table class="wiki-table achievements-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Place</th>
+                <th>Tournament</th>
+                <th>Prize</th>
+              </tr>
+            </thead>
+            <tbody>${achieveRows}</tbody>
+          </table>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    function init() {
+      const playerId = getParam('id');
+      if (!playerId) { window.location.href = 'index.html'; return; }
+
+      const data = PLAYERS_DATA;
+      const player = data.players.find(p => p.id === playerId);
+
+      const page = document.getElementById('playerPage');
+      if (!player) {
+        page.innerHTML = `<h1 class="wiki-page-title">Joueur introuvable</h1><p>L'id "${playerId}" n'existe pas.</p><a href="index.html">← Retour</a>`;
+        return;
+      }
+      page.classList.add('player-layout');
+      page.innerHTML = renderPlayer(player);
+
+      // Fix no-photo display
+      page.querySelectorAll('.infobox-image img').forEach(img => {
+        function showFallback() {
+          img.style.display = 'none';
+          img.parentElement.classList.add('no-photo-box');
+          const letter = img.parentElement.querySelector('.no-photo-letter');
+          if (letter) letter.style.display = 'flex';
+        }
+        img.onerror = showFallback;
+        if (img.complete && img.naturalWidth === 0) {
+          showFallback();
+        }
+      });
+    }
+    init();
+  </script>
+</body>
+</html>

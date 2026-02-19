@@ -1,0 +1,92 @@
+{
+  "_AIDE_GENERALE": "Remplis ce fichier avec tes infos CS2 et renvoie-le moi ! Les champs avec _AIDE t'expliquent quoi mettre.",
+
+  "id": "rayasticot",
+  "_AIDE_id": "Ton pseudo en minuscules, sans espaces ni accents. Ex: scream, tonpote, kennyS",
+
+  "pseudo": "Rayasticot",
+  "_AIDE_pseudo": "Ton pseudo in-game tel qu'il s'affiche. Ex: ScreaM, TonPote",
+
+  "nom": "Paparazzi",
+  "prenom": "Ulysse",
+
+    "photo": "photos/rayasticot.png",
+  "_AIDE_photo": "Laisse vide, je m'en occupe. Sinon envoie-moi une photo avec le fichier.",
+
+  "nationalite": "Suisse",
+  "_AIDE_nationalite": "Ton pays en anglais. Ex: France, Belgium, Morocco, Canada",
+
+  "drapeau": "🇨🇭",
+  "_AIDE_drapeau": "L'emoji drapeau de ton pays. Ex: 🇫🇷 🇧🇪 🇲🇦 🇨🇦 🇨🇭",
+
+  "age": 20,
+  "_AIDE_age": "Ton âge (un nombre, pas de guillemets)",
+
+  "dateNaissance": "October 9, 2006",
+  "_AIDE_dateNaissance": "Ta date de naissance en anglais. Ex: March 15, 2001",
+
+  "role": "Lurker",
+  "_AIDE_role": "Ton rôle principal. Ex: Rifler, AWPer, Entry Fragger, IGL, Support, Lurker, Coach",
+
+  "armePreferee": "R8",
+  "_AIDE_armePreferee": "Ton arme préférée. Ex: AK-47, AWP, M4A1-S, M4A4, Deagle, USP-S",
+
+  "equipeActuelle": "Porning",
+  "_AIDE_equipeActuelle": "Le nom de ton équipe actuelle (ou 'Aucune')",
+
+  "status": "Active",
+  "_AIDE_status": "Active ou Inactive",
+
+  "crosshairPlacement": "King Of Gamer",
+  "_AIDE_crosshairPlacement": "Décris ton style en quelques mots. Ex: Headshot Machine, Spray & Pray, One Tap God",
+
+  "maps": ["Office", "Alpine", "Italy"],
+  "_AIDE_maps": "Tes 3 maps préférées parmi: Dust2, Mirage, Inferno, Nuke, Overpass, Ancient, Anubis, Vertigo",
+
+  "stats": {
+    "kdRatio": 1.1,
+    "hsPercent": 56.0,
+    "rating": 1.19,
+    "mapsJoues": 130,
+    "_AIDE": "Tes stats CS2. kdRatio = kills/deaths, hsPercent = % headshot, rating = ta note, mapsJoues = nombre de maps jouées"
+  },
+
+  "mouseSettings": {
+    "mouse": "Raseur à 2€",
+    "edpi": "800",
+    "dpi": "400",
+    "sensitivity": "2.0",
+    "_AIDE": "eDPI = DPI x sensibilité in-game"
+  },
+
+  "gear": {
+    "Mouse": "Raseur à 2€",
+    "Mousepad": "Nothing",
+    "Monitor": "Almost broken (60Hz)",
+    "Resolution": "1980x1080",
+    "Keyboard": "Laptop keyboard",
+    "Headset": "Entry level JBL headphones"
+  },
+
+  "reseaux": {
+    "twitter": "",
+    "twitch": "",
+    "youtube": "",
+    "instagram": "",
+    "_AIDE": "Mets tes liens complets ou laisse vide. Ex: https://twitch.tv/tonpseudo"
+  },
+
+  "bio": "Ulysse \"Rayasticot\" Paparazzi is a playful rifler who loves to troll opponents and is notorious for pulling out the Revolver on hostage maps. His unpredictable decisions and cheeky plays keep enemies guessing, and while his style is mischievous, his timing and aim often turn risky Revolver attempts into match-defining moments. Rayasticot is a crowd-pleaser on hostage scenarios — chaotic, fun, and surprisingly effective.",
+
+  "equipesPassees": [
+    { "nom": "Porning", "periode": "Late 2025 — Present" },
+    { "nom": "Fist.First", "periode": "2022 — 2025" }
+  ],
+  "_AIDE_equipesPassees": "Liste tes anciennes équipes avec les dates. Ajoute ou supprime des lignes selon ton parcours.",
+
+  "palmares": [
+    { "tournoi": "Judy Hops Pro league Season XXII", "place": "1st", "annee": "2026", "prize": "$6700" },
+    { "tournoi": "Lausanne tournament", "place": "2nd", "annee": "2025", "prize": "$40000" }
+  ],
+  "_AIDE_palmares": "Tes résultats en tournoi. place = 1st, 2nd, 3rd, etc. Ajoute ou supprime des lignes. Mets ce que tu veux dans prize."
+}

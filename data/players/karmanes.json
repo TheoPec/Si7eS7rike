@@ -1,0 +1,91 @@
+{
+  "_AIDE_GENERALE": "Remplis ce fichier avec tes infos CS2 et renvoie-le moi ! Les champs avec _AIDE t'expliquent quoi mettre.",
+
+  "id": "karmanes",
+  "_AIDE_id": "Ton pseudo en minuscules, sans espaces ni accents. Ex: scream, tonpote, kennyS",
+
+  "pseudo": "Karmanes",
+  "_AIDE_pseudo": "Ton pseudo in-game tel qu'il s'affiche. Ex: ScreaM, TonPote",
+
+  "nom": "Lacquement",
+  "prenom": "Joannes",
+
+  "photo": "photos/karmanes.png",
+  "_AIDE_photo": "Laisse vide, je m'en occupe. Sinon envoie-moi une photo avec le fichier.",
+
+  "nationalite": "Belgique",
+  "_AIDE_nationalite": "Ton pays en anglais. Ex: France, Belgium, Morocco, Canada",
+
+  "drapeau": "🇧🇪",
+  "_AIDE_drapeau": "L'emoji drapeau de ton pays. Ex: 🇫🇷 🇧🇪 🇲🇦 🇨🇦 🇨🇭",
+
+  "age": 20,
+  "_AIDE_age": "Ton âge (un nombre, pas de guillemets)",
+
+  "dateNaissance": "Mars 11, 2005",
+  "_AIDE_dateNaissance": "Ta date de naissance en anglais. Ex: March 15, 2001",
+
+  "role": "Musical Support",
+  "_AIDE_role": "Ton rôle principal. Ex: Rifler, AWPer, Entry Fragger, IGL, Support, Lurker",
+
+  "armePreferee": "FLstudio",
+  "_AIDE_armePreferee": "Ton arme préférée. Ex: AK-47, AWP, M4A1-S, M4A4, Deagle, USP-S",
+
+  "equipeActuelle": "Porning",
+  "_AIDE_equipeActuelle": "Le nom de ton équipe actuelle (ou 'Aucune')",
+
+  "status": "Inactive",
+  "_AIDE_status": "Active ou Inactive",
+
+  "crosshairPlacement": "The Musician",
+  "_AIDE_crosshairPlacement": "Décris ton style en quelques mots. Ex: Headshot Machine, Spray & Pray, One Tap God",
+
+  "maps": ["", "", ""],
+  "_AIDE_maps": "Tes 3 maps préférées parmi: Dust2, Mirage, Inferno, Nuke, Overpass, Ancient, Anubis, Vertigo",
+
+  "stats": {
+    "kdRatio": 0.77,
+    "hsPercent": 40.0,
+    "rating": 0.82,
+    "mapsJoues": 167,
+    "_AIDE": "Tes stats CS2. kdRatio = kills/deaths, hsPercent = % headshot, rating = ta note, mapsJoues = nombre de maps jouées"
+  },
+
+  "mouseSettings": {
+    "mouse": "Logitech G502 Hero",
+    "edpi": "512",
+    "dpi": "800",
+    "sensitivity": "0.64",
+    "_AIDE": "eDPI = DPI x sensibilité in-game"
+  },
+
+  "gear": {
+    "Mouse": "Logitech G502 Hero",
+    "Mousepad": "Cyberpunk 2077 XL mousepad",
+    "Monitor": "MSI Curved (180Hz)",
+    "Resolution": "1280x960 stretched",
+    "Keyboard": "$1 Temu keyboard",
+    "Headset": "JBL gaming headphones"
+  },
+
+  "reseaux": {
+    "twitter": "",
+    "twitch": "",
+    "youtube": "",
+    "instagram": "",
+    "_AIDE": "Mets tes liens complets ou laisse vide. Ex: https://twitch.tv/tonpseudo"
+  },
+
+  "bio": "Juste — c'est un musicien, pas un joueur.",
+
+  "equipesPassees": [
+    { "nom": "Porning", "periode": "2024 — Present" }
+  ],
+  "_AIDE_equipesPassees": "Liste tes anciennes équipes avec les dates. Ajoute ou supprime des lignes selon ton parcours.",
+
+
+    "palmares": [
+      { "tournoi": "Tommowland 2025", "place": "1st", "annee": "2025", "prize": "$1500000" }
+    ],
+  "_AIDE_palmares": "Tes résultats en tournoi. place = 1st, 2nd, 3rd, etc. Ajoute ou supprime des lignes. Mets ce que tu veux dans prize."
+}
