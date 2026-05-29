@@ -4,7 +4,7 @@
   "id": "aindustries",
   "_AIDE_id": "Ton pseudo en minuscules, sans espaces ni accents. Ex: scream, tonpote, kennyS",
 
-  "pseudo": "Aindustries",
+  "pseudo": "p0rning aindustries",
   "_AIDE_pseudo": "Ton pseudo in-game tel qu'il s'affiche. Ex: ScreaM, TonPote",
 
   "nom": "Daoust",
@@ -40,39 +40,39 @@
   "crosshairPlacement": "Loud Rage",
   "_AIDE_crosshairPlacement": "Décris ton style en quelques mots. Ex: Headshot Machine, Spray & Pray, One Tap God",
 
-  "maps": ["", "", ""],
+  "maps": ["Nuke", "Anubis", "Dust2"],
   "_AIDE_maps": "Tes 3 maps préférées parmi: Dust2, Mirage, Inferno, Nuke, Overpass, Ancient, Anubis, Vertigo",
 
   "stats": {
     "kdRatio": 0.8,
     "hsPercent": 33.0,
-    "rating": 0.92,
-    "mapsJoues": 291,
+    "rating": 0.93,
+    "mapsJoues": 310,
     "_AIDE": "Tes stats CS2. kdRatio = kills/deaths, hsPercent = % headshot, rating = ta note, mapsJoues = nombre de maps jouées"
   },
 
   "mouseSettings": {
-    "mouse": "Raseur à 2€",
+    "mouse": "Model O-",
     "edpi": "800",
-    "dpi": "400",
-    "sensitivity": "2.0",
+    "dpi": "1000",
+    "sensitivity": "0.8",
     "_AIDE": "eDPI = DPI x sensibilité in-game"
   },
 
   "gear": {
-    "Mouse": "Raseur à 2€",
-    "Mousepad": "Nothing",
-    "Monitor": "Almost broken (100Hz)",
+    "Mouse": "Model O-",
+    "Mousepad": "Big Black Mousepad",
+    "Monitor": "DELL P2425H (100Hz)",
     "Resolution": "1980x1080",
-    "Keyboard": "Laptop keyboard",
-    "Headset": "Entry level JBL headphones"
+    "Keyboard": "Keychron C1 Pro",
+    "Headset": "Logitech G PRO X LIGHTSPEED"
   },
 
   "reseaux": {
-    "twitter": "",
-    "twitch": "",
-    "youtube": "",
-    "instagram": "",
+    "twitter": "https://x.com/THE_AINDUSTRIES",
+    "twitch": "https://www.twitch.tv/aindustries2",
+    "youtube": "https://www.youtube.com/@aindustries",
+    "instagram": "https://www.instagram.com/the_aindustries/",
     "_AIDE": "Mets tes liens complets ou laisse vide. Ex: https://twitch.tv/tonpseudo"
   },
 
