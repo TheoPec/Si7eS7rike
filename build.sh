@@ -111,9 +111,30 @@ echo -n "var CAROUSEL_DATA = " > "$CAROUSEL_OUTPUT"
 echo "$carousel_json" | jq '.' >> "$CAROUSEL_OUTPUT"
 echo ";" >> "$CAROUSEL_OUTPUT"
 
+# ==============================================
+#  GÉNÉRATION DU DOSSIER BUILD
+# ==============================================
+BUILD_DIR="$SCRIPT_DIR/build"
+echo ""
+echo -e "\e[36m  === Création du dossier 'build' ===\e[0m"
+rm -rf "$BUILD_DIR"
+mkdir -p "$BUILD_DIR/data"
+
+cp "$OUTPUT_FILE" "$BUILD_DIR/data/" 2>/dev/null
+cp "$CAROUSEL_OUTPUT" "$BUILD_DIR/data/" 2>/dev/null
+[ -d "$PHOTOS_DIR" ] && cp -r "$PHOTOS_DIR" "$BUILD_DIR/"
+[ -d "$CAROUSEL_DIR" ] && cp -r "$CAROUSEL_DIR" "$BUILD_DIR/"
+[ -d "$SCRIPT_DIR/css" ] && cp -r "$SCRIPT_DIR/css" "$BUILD_DIR/" 2>/dev/null
+[ -d "$SCRIPT_DIR/js" ] && cp -r "$SCRIPT_DIR/js" "$BUILD_DIR/" 2>/dev/null
+[ -d "$SCRIPT_DIR/assets" ] && cp -r "$SCRIPT_DIR/assets" "$BUILD_DIR/" 2>/dev/null
+[ -d "$SCRIPT_DIR/images" ] && cp -r "$SCRIPT_DIR/images" "$BUILD_DIR/" 2>/dev/null
+[ -d "$SCRIPT_DIR/img" ] && cp -r "$SCRIPT_DIR/img" "$BUILD_DIR/" 2>/dev/null
+find "$SCRIPT_DIR" -maxdepth 1 -type f \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec cp {} "$BUILD_DIR/" \;
+
 echo ""
 count=$(echo "$players_json" | jq 'length')
 echo -e "\e[32m  $count joueur(s) généré(s) dans data/players.js\e[0m"
-echo -e "\e[32m  Tu peux ouvrir index.html !\e[0m"
+echo -e "\e[32m  Le dossier 'build/' est prêt pour le serveur !\e[0m"
+echo -e "\e[32m  Tu peux ouvrir build/index.html !\e[0m"
 echo ""
 read -p "Appuie sur Entrée pour fermer"

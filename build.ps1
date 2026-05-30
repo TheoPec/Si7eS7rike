@@ -126,8 +126,33 @@ if ($slides.Count -eq 0) {
 $carouselJs = "var CAROUSEL_DATA = $carouselJson;"
 [System.IO.File]::WriteAllText($carouselOutput, $carouselJs, $utf8NoBom)
 
+# ==============================================
+#  GENERATION DU DOSSIER BUILD
+# ==============================================
+$buildDir = Join-Path $scriptDir "build"
+Write-Host ""
+Write-Host "  === Creation du dossier 'build' ===" -ForegroundColor Cyan
+
+if (Test-Path $buildDir) {
+    Remove-Item -Path $buildDir -Recurse -Force
+}
+New-Item -Path (Join-Path $buildDir "data") -ItemType Directory -Force | Out-Null
+
+Copy-Item -Path $outputFile -Destination (Join-Path $buildDir "data") -Force -ErrorAction SilentlyContinue
+Copy-Item -Path $carouselOutput -Destination (Join-Path $buildDir "data") -Force -ErrorAction SilentlyContinue
+
+$dirsToCopy = @("photos", "carousel", "css", "js", "assets", "images", "img")
+foreach ($d in $dirsToCopy) {
+    $srcDir = Join-Path $scriptDir $d
+    if (Test-Path $srcDir) {
+        Copy-Item -Path $srcDir -Destination $buildDir -Recurse -Force -ErrorAction SilentlyContinue
+    }
+}
+Get-ChildItem -Path $scriptDir -File | Where-Object { $_.Extension -match '\.(html|css|js)$' } | Copy-Item -Destination $buildDir -Force -ErrorAction SilentlyContinue
+
 Write-Host ""
 Write-Host "  $($players.Count) joueur(s) genere(s) dans data\players.js" -ForegroundColor Green
-Write-Host "  Tu peux ouvrir index.html !" -ForegroundColor Green
+Write-Host "  Le dossier 'build\' est pret pour le serveur !" -ForegroundColor Green
+Write-Host "  Tu peux ouvrir build\index.html !" -ForegroundColor Green
 Write-Host ""
 Read-Host "Appuie sur Entree pour fermer"
